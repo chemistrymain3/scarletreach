@@ -58,3 +58,8 @@
 			playsound(get_turf(target), 'sound/magic/magic_nulled.ogg', 100)
 			qdel(src)
 			return BULLET_ACT_BLOCK
+		else
+			M.adjust_fire_stacks(2) //2 pats to put it out
+			visible_message(span_warning("[src] ignites [target]!"))
+			M.ignite_mob()
+	return FALSE
